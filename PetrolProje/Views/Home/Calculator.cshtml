@@ -1,0 +1,31 @@
+﻿@model PetrolProje.Models.Calculator
+
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Calculator">
+                <div class="text-center">
+                    <br />
+                    <br />
+                    <h1>@ViewData["Title"]</h1>
+                    <p><label class="calculate">Fuel</label></p>
+                    <p><input type="number" asp-for="value1" /></p>
+                    <p><label class="calculate">Distance Taken</label></p>
+                    <p><input type="number" asp-for="value2" /></p>
+
+                    <p><input type="submit" value="Calculate" asp-for="Calculate" /></p>
+                    <br />
+                    <p><label class="label">Result</label></p>
+                    <p><label class="calculate">@ViewData["Result"] L/100km</label></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
